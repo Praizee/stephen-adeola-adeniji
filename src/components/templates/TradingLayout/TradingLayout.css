@@ -1,0 +1,56 @@
+.trading-layout {
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-direction: column;
+  background-color: var(--color-background-default);
+  min-height: 100vh;
+}
+
+.trading-layout__main-content {
+  margin: 0 auto;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  padding-top: var(--spacing-xs);
+  flex-grow: 1;
+}
+
+.trading-layout__chart-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.trading-layout__right-sidebar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+.trading-layout__bottom-section {
+  padding: 0 var(--spacing-lg) var(--spacing-lg);
+}
+
+/* Responsive rules */
+@media (max-width: 1024px) {
+  .trading-layout__main-content {
+    grid-template-columns: 1fr; /* Stack chart and sidebar vertically */
+  }
+
+  .trading-layout__right-sidebar {
+    grid-template-columns: 1fr; /* Stack OrderBook and TradingForm vertically */
+  }
+}
+
+@media (max-width: 640px) {
+  .trading-layout__main-content {
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+
+  .trading-layout__bottom-section {
+    padding: 0 var(--spacing-md) var(--spacing-md);
+  }
+}
+

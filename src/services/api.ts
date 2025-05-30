@@ -67,9 +67,8 @@ export const getOrderBook = async (
 export const getMarketOverview = async (
   symbol: string
 ): Promise<MarketOverviewData> => {
-  // Replace with your actual market overview/ticker API endpoint
   const url = `${BASE_URL}/ticker/24hr?symbol=${symbol}`;
-  const data = await fetcher<Binance24hrTicker>(url);
+  const data = await fetcher<any>(url);
 
   return {
     symbol: data.symbol,
@@ -79,11 +78,11 @@ export const getMarketOverview = async (
     highPrice: parseFloat(data.highPrice),
     lowPrice: parseFloat(data.lowPrice),
     volume: parseFloat(data.volume),
-    // Add other relevant fields
   };
 };
 
 export const getUserBalances = async (): Promise<UserBalances> => {
+  // This would typically require authentication headers
   const url = `${BASE_URL}/account`;
   const data = await fetcher<any>(url, {
     headers: {
@@ -91,7 +90,6 @@ export const getUserBalances = async (): Promise<UserBalances> => {
     },
   });
 
-  // Example parsing for a simple balances object
   const balances: UserBalances = {};
   // Assuming data.balances is an array of { asset: 'BTC', free: '1.23' }
   if (Array.isArray(data.balances)) {

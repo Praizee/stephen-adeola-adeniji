@@ -1,0 +1,46 @@
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor; /* Allows color property to control SVG fill */
+}
+
+/* Sizes */
+.icon--size-small {
+  width: 16px;
+  height: 16px;
+}
+
+.icon--size-medium {
+  width: 20px;
+  height: 20px;
+}
+
+.icon--size-large {
+  width: 24px;
+  height: 24px;
+}
+
+/* Colors */
+.icon--color-default {
+  color: var(--color-text-default);
+}
+
+.icon--color-primary {
+  color: var(--color-primary);
+}
+
+.icon--color-success {
+  color: var(--color-success);
+}
+
+.icon--color-danger {
+  color: var(--color-danger);
+}
+
+.icon--color-muted {
+  color: var(--color-text-muted);
+}
+
+.icon--color-inverted {
+  color: var(--color-text-inverted);
+}

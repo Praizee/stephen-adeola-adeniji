@@ -1,0 +1,23 @@
+.price-display {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxs);
+}
+
+.price-display__value-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-xs);
+}
+
+.price-display__unit {
+  font-size: var(--font-size-sm); /* Adjust unit size if needed */
+  color: var(--color-text-muted);
+}
+
+.price-display__change {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xxs);
+  font-weight: var(--font-weight-medium);
+}

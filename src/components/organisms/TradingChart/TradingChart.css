@@ -1,0 +1,91 @@
+.trading-chart {
+  background-color: var(--color-background-card);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-card-border);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.trading-chart__chart-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-background-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.trading-chart__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.trading-chart__intervals {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.trading-chart__interval-button {
+  min-width: 40px;
+  text-align: center;
+  padding: var(--spacing-xss) var(--spacing-sm);
+  border-radius: var(--border-radius-full);
+  color: var(--color-secondary-tint2);
+  background-color: transparent;
+  font-weight: var(--font-weight-medium);
+}
+
+.trading-chart__interval-button.is-active {
+  background-color: var(--color-secondary-tint);
+  color: white;
+}
+
+.trading-chart__interval-button:hover {
+  background-color: var(--color-secondary-tint);
+  color: white;
+}
+
+.trading-chart__fx-indicators {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.trading-chart__container {
+  flex-grow: 1; /* Allow chart to take available height */
+  min-height: 250px; /* Minimum height for the chart canvas */
+}
+
+.trading-chart__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.trading-chart__price-info span {
+  margin-right: var(--spacing-xxs);
+}
+
+.trading-chart__message {
+  text-align: center;
+  padding: var(--spacing-lg);
+  color: var(--color-text-muted);
+}
+
+.trading-chart__message--error {
+  color: var(--color-danger);
+}
+
