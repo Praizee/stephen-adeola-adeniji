@@ -1,0 +1,74 @@
+.order-book {
+  background-color: var(--color-background-card);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-card-border);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Take full height of parent */
+}
+
+.order-book__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--color-border-light);
+  color: var(--color-text-muted);
+}
+
+.order-book__header-item {
+  text-align: right;
+}
+
+.order-book__header-item:first-child {
+  text-align: left; /* Adjust alignment for price column header */
+}
+
+.order-book__lists {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes bids and asks to ends */
+  overflow-y: auto; /* Enable scrolling if too many rows */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.order-book__lists::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.order-book__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-book__list--asks {
+  /* Specific styling for asks list if needed */
+}
+
+.order-book__list--bids {
+  /* Specific styling for bids list if needed */
+}
+
+.order-book__spread {
+  text-align: center;
+  padding: var(--spacing-sm) 0;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-default);
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.order-book__message {
+  text-align: center;
+  padding: var(--spacing-lg);
+  color: var(--color-text-muted);
+}
+
+.order-book__message--error {
+  color: var(--color-danger);
+}
+

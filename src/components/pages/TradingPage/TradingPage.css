@@ -1,0 +1,25 @@
+.trading-page {
+  /* Full viewport height for the page */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.trading-page__message {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+}
+
+.trading-page__message--error {
+  color: var(--color-danger);
+}
+
+.trading-page__message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+

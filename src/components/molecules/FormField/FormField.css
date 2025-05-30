@@ -1,0 +1,18 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing-md);
+}
+
+.form-field__label {
+  margin-bottom: var(--spacing-xs);
+}
+
+.form-field__input {
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding doesn't increase total width */
+}
+
+.form-field__error {
+  margin-top: var(--spacing-xs);
+}

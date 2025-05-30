@@ -1,0 +1,55 @@
+.order-book-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Price, Amount, Total */
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xxs) var(--spacing-sm);
+  position: relative;
+  overflow: hidden; /* To contain the fill bar */
+  font-family: var(--font-family-monospace); /* Monospace for numbers */
+}
+
+.order-book-row:hover {
+  background-color: var(--color-background-hover);
+}
+
+.order-book-row__fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  opacity: 0.15; /* Semi-transparent */
+  transition: width 0.1s ease-out; /* Smooth width changes */
+}
+
+.order-book-row__fill--buy {
+  background-color: var(--color-success);
+}
+
+.order-book-row__fill--sell {
+  background-color: var(--color-danger);
+}
+
+.order-book-row__price,
+.order-book-row__amount,
+.order-book-row__total {
+  position: relative; /* Keep text above the fill bar */
+  z-index: 1;
+  text-align: right;
+}
+
+.order-book-row__price--buy {
+  color: var(--color-success);
+}
+
+.order-book-row__price--sell {
+  color: var(--color-danger);
+}
+
+.order-book-row__amount {
+  color: var(--color-text-default);
+}
+
+.order-book-row__total {
+  color: var(--color-text-muted);
+}

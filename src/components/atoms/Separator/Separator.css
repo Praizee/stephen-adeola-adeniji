@@ -1,0 +1,9 @@
+.separator {
+  height: 40px;
+  width: 1px;
+  margin-inline: 40px 53px;
+  background-color: var(--color-secondary-tint);
+  opacity: 50%;
+  flex-shrink: 0;
+}
+

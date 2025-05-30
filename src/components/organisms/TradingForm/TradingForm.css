@@ -1,0 +1,131 @@
+.trading-form {
+  background-color: var(--color-background-card);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-card-border);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.trading-form__type-selector {
+  display: flex;
+  width: 100%;
+  margin-bottom: var(--spacing-md);
+}
+
+.trading-form__type-button {
+  flex: 1;
+  border-radius: var(--border-radius-md);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+}
+
+.trading-form__type-button--buy {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.trading-form__type-button--sell {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.trading-form__order-type-selector {
+  display: flex;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+  align-items: center;
+}
+
+.trading-form__order-type-selector .button {
+  padding: var(--spacing-xs) var(--spacing-md);
+}
+
+.trading-form__help-icon {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.trading-form__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.trading-form__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xs) 0;
+  border-top: 1px dashed var(--color-border-light);
+  border-bottom: 1px dashed var(--color-border-light);
+}
+
+.trading-form__total-label {
+  color: var(--color-text-muted);
+}
+
+.trading-form__total-value {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-default);
+}
+
+.trading-form__post-only {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+}
+
+.trading-form__checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary); /* Style checkbox */
+}
+
+.trading-form__checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xxs);
+  cursor: pointer;
+}
+
+.trading-form__total-account-value,
+.trading-form__open-orders,
+.trading-form__available {
+  margin-top: var(--spacing-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed var(--color-border-light);
+  padding-bottom: var(--spacing-xs);
+}
+
+.trading-form__total-account-value:first-of-type {
+  margin-top: var(--spacing-lg); /* More space after checkboxes */
+}
+
+.trading-form__total-account-value span,
+.trading-form__open-orders span,
+.trading-form__available span {
+  font-weight: var(--font-weight-semibold);
+}
+
+.trading-form__submit-button {
+  margin-top: var(--spacing-lg);
+  width: 100%;
+}
+
+.trading-form__deposit-button {
+  margin-top: var(--spacing-sm);
+  width: 100%;
+  background-color: var(--color-background-dark); /* Match screenshot */
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.trading-form__deposit-button:hover {
+  background-color: var(--color-background-darker);
+}
+
